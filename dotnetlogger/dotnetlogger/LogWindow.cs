@@ -19,7 +19,8 @@ namespace dotnetlogger
 
         public void AppendText(string log)
         {
-            logs.AppendText(log + "\n");
+            logs.Text += log;
+            logs.Text += Environment.NewLine;
         }
     }
 }

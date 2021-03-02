@@ -7,7 +7,7 @@
     <ProjectGuid>{358BA6B1-5903-4C1A-84E5-F83C2135A198}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>logger_test</RootNamespace>
-    <AssemblyName>logger_test</AssemblyName>
+    <AssemblyName>logger-test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,6 +54,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dotnetlogger\dotnetlogger.csproj">
+      <Project>{aa0fea42-8f61-49eb-b943-5abccdfcf0a4}</Project>
+      <Name>dotnetlogger</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

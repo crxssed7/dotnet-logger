@@ -24,5 +24,15 @@ namespace logger_test
         {
             logger.Log(textBox1.Text.Trim());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            logger.ShowLogger();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            logger.SaveLogs(logger.GenerateLogFileName("testProject"));
+        }
     }
 }

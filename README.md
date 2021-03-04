@@ -24,3 +24,6 @@ logger.SaveLogs("/path/to/log/file.log");
 
 ## Installation
 Download the latest release, and add a reference to the file in Visual Studio.
+
+## Notes
+- `ShowLogger();` does not work for console applications. With the current tests that I've done, the function only works on WinForms. I'm sure there is a way to hack it so it works though.

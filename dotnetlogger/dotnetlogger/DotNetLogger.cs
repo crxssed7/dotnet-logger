@@ -35,7 +35,7 @@ namespace dotnetlogger
 
         public void SaveLogs(string logFile)
         {
-            using (StreamWriter writer = new StreamWriter(logFile))
+            using (StreamWriter writer = new StreamWriter(logFile, append: true))
             {
                 for (int i = 0; i < logs.Count; i++)
                 {

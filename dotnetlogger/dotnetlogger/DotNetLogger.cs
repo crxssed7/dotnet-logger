@@ -44,10 +44,11 @@ namespace dotnetlogger
             }
         }
 
-        public void ClearLogs()
+        public void ClearLogs(bool keepWindowLogs = true)
         {
             logs.Clear();
-            window.RemoveText();
+            if (!keepWindowLogs)
+                window.RemoveText();
         }
     }
 }

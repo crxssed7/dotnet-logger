@@ -33,9 +33,9 @@ namespace dotnetlogger
             return $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day}_{projectName}.log";
         }
 
-        public void SaveLogs(string logFile)
+        public void SaveLogs(string logFile, bool append)
         {
-            using (StreamWriter writer = new StreamWriter(logFile, append: true))
+            using (StreamWriter writer = new StreamWriter(logFile, append: append))
             {
                 for (int i = 0; i < logs.Count; i++)
                 {

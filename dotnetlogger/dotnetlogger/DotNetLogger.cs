@@ -15,7 +15,9 @@ namespace dotnetlogger
         public void Log(string logMessage, bool writeToConsole = true)
         {
             // Log example - [18:28]: logMessage
-            string log = $"[{DateTime.Now.Hour}:{DateTime.Now.Minute}]: {logMessage}";
+            string hour = (DateTime.Now.Hour < 10) ? $"0{DateTime.Now.Hour}" : DateTime.Now.Hour.ToString();
+            string min = (DateTime.Now.Minute < 10) ? $"0{DateTime.Now.Minute}" : DateTime.Now.Minute.ToString();
+            string log = $"[{hour}:{min}]: {logMessage}";
             logs.Add(log);
             window.AppendText(log);
             if (writeToConsole)

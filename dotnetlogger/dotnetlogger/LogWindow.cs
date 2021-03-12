@@ -22,5 +22,10 @@ namespace dotnetlogger
             logs.Text += log;
             logs.Text += Environment.NewLine;
         }
+
+        public void RemoveText()
+        {
+            logs.Text = "";
+        }
     }
 }

@@ -43,5 +43,11 @@ namespace dotnetlogger
                 }
             }
         }
+
+        public void ClearLogs()
+        {
+            logs.Clear();
+            window.RemoveText();
+        }
     }
 }

@@ -22,6 +22,11 @@ logger.GenerateLogFileName("projectName");
 logger.SaveLogs("/path/to/log/file.log");
 ```
 
+**Clear all logs**
+```csharp
+logger.ClearLogs(true);
+```
+
 ## Installation
 Download the latest release, and add a reference to the file in Visual Studio.
 
